@@ -18,6 +18,7 @@ function addTodo(a) {
   } else {
     ui.addTodoToUI(newTodo)
     ui.displayMessages('Successfully added!', 'success')
+    Storage.addTodoToStorage(newTodo)
   }
 
   ui.clearInput(todoInput)
