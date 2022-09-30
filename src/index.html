@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div id="conta" class="container">
+        <div class="card row">
+            <div id="img-div" class="card-header">
+                <img id="imgg"
+                    src="https://imageio.forbes.com/specials-images/dam/imageserve/1092571024/0x0.jpg?format=jpg&width=1200"
+                    class="mb-1" alt="" />
+            </div>
+            <div class="card-body">
+                <form id="todo-form" name="form">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <input class="form-control" type="text" name="todo" id="todo"
+                                placeholder="Bir Todo Girin" />
+                        </div>
+                    </div>
+                    <button id="btn-todo" type="submit" class="btn btn-success btn-lg btn-block">
+                        Enter Todo
+                    </button>
+                </form>
+                <hr />
+            </div>
+
+            <div class="card-body">
+                <hr />
+                <h5 class="card-title" id="tasks-title">Todolar</h5>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <input class="form-control" type="text" name="filter" id="filter"
+                            placeholder="Bir Todo Arayın" />
+                    </div>
+                </div>
+
+                <hr />
+                <ul class="list-group">
+                    <!-- <li class="list-group-item d-flex justify-content-between">
+                            Todo 1
+                            <a href = "#" class ="delete-item">
+                                <i class = "fa fa-remove"></i>
+                            </a>
+
+                        </li>-->
+                </ul>
+                <hr />
+                <a id="clear-todos" class="btn btn-danger btn-lg btn-block" href="#">Clear All</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="../src/storage.js"></script>
+    <script src="../src/ui.js"></script>
+    <script src="../src/project.js"></script>
+</body>
+
+</html>
