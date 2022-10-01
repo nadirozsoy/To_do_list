@@ -9,11 +9,23 @@ class Storage {
     return todo
   }
   static addTodoToStorage(newTodo) {
-    let todo = this.getTodoFromStorage()
-    if (todo.indexOf(newTodo) === -1) {
-      todo.push(newTodo)
+    let todos = this.getTodoFromStorage()
+    if (todos.indexOf(newTodo) === -1) {
+      todos.push(newTodo)
     }
-    localStorage.setItem('todos', JSON.stringify(todo))
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }
+  //   static clearAllTodosFromStorage() {
+  //     localStorage.removeItem('todos')
+  //   }
+  static deleteTodoFromStorage(deletetodo) {
+    let todos = this.getTodoFromStorage()
+    todos.forEach((todo, index) => {
+      if (todo === deletetodo) {
+        todos.splice(index, 1)
+      }
+    })
+    localStorage.setItem('todos', JSON.stringify(todos))
   }
   static clearAllTodosFromStorage() {
     localStorage.removeItem('todos')
